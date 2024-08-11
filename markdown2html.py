@@ -15,8 +15,9 @@ def main():
     if len(sys.argv) != 3:
         print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
         sys.exit(1)
- 
+
     markdown_file = sys.argv[1]
+    print(f"Checking if file exists: {markdown_file}", file=sys.stderr)  # Debugging print
 
     if not os.path.isfile(markdown_file):
         print(f"Missing {markdown_file}", file=sys.stderr)
